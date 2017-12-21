@@ -1,8 +1,7 @@
 <?php
 
-$dsn = "mysql:host=mysql531.loopia.se:3306/;dbname=mdprodukt92_com";
-$username = "joomla@m38472";
-$password = "kcqfovkqh8ckym39";
+require_once('db-connection.php');	
+require_once('functions.php');
 
 try {
     $conn = new PDO($dsn, $username, $password);

@@ -1,18 +1,7 @@
 <?php
 
-$dsn = "mysql:host=mysql531.loopia.se:3306/;dbname=mdprodukt92_com;charset=utf8";
-$username = "joomla@m38472";
-$password = "kcqfovkqh8ckym39";
-
-ini_set('max_execution_time', 300);
-
-try {
-    $conn = new PDO($dsn, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"; 
-    } catch(PDOException $e){
-    echo "Connection failed: " . $e->getMessage();
-    }
+require_once('db-connection.php');	
+require_once('functions.php');
 	
 $stmt = $conn->prepare("SELECT * FROM jos_mdprodukt92_com_hikashop_product");
 $stmt->execute();
