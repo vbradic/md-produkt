@@ -1,5 +1,5 @@
 .gitignore
-/csv_files
+csv_files/
 db-connection.php
 db-connection.txt
 brand.csv
